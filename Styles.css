@@ -1,0 +1,21 @@
+body{
+	text-align: center;
+	margin: 0;
+}
+
+.checkmark-label{
+	font-size: 3rem;
+	margin-top: 2rem;
+}
+
+input.larger{
+	transform: scale(2);
+	margin: 8%;
+}
+
+.entry-styles{
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 1rem;
+	padding: -2rem;
+}
