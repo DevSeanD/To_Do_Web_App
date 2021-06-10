@@ -1,3 +1,15 @@
+function displayDate(){
+  var currentDate = new Date();
+  var currentDay = String(currentDate.getDate()).padStart(2,'0');
+  var currentMonth = String(currentDate.getMonth() + 1).padStart(2,'0'); // add 1 because jan = 0 here
+  var currentYear = String(currentDate.getFullYear());
+
+  currentDate = currentMonth + '/' + currentDay + '/' + currentYear;
+
+  dateH3 = document.getElementById('displayDate');
+  dateH3.innerHTML = currentDate;
+}
+
 function addNewItem(){
   var row = document.createElement("div");
   row.classList.add("row");
@@ -33,3 +45,7 @@ function addNewItem(){
   itemContainer = document.getElementById('CheckItemContainer')
   itemContainer.appendChild(row);
 }
+
+window.onload = function() {
+  displayDate();
+};
