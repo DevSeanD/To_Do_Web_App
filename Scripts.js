@@ -1,3 +1,17 @@
+function darkModeToggler(){
+  var x = document.getElementById("darkModeToggle").checked;
+  if(x){
+    document.getElementById("toDoBody").style.backgroundColor = "black";
+    document.getElementById("heading").style.color = "white";
+    document.getElementById("displayDate").style.color = "white";
+  }
+  if(!x){
+    document.getElementById("toDoBody").style.backgroundColor = "white";
+    document.getElementById("heading").style.color = "black";
+    document.getElementById("displayDate").style.color = "black";
+  }
+}
+
 function displayDate(){
   var currentDate = new Date();
   var currentDay = String(currentDate.getDate()).padStart(2,'0');
