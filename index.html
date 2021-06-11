@@ -7,13 +7,18 @@
     <script src="Scripts.js"></script>
     <title>To Do</title>
   </head>
-  <body>
-
+  <body id="toDoBody">
     <h1 id="heading"> To Do List</h1>
     <h3 id="displayDate"></h3>
-    <button class="btn btn-primary" onclick="addNewItem();">Add Another Item</button>
 
-	<div id="CheckItemContainer" class="container">
+    <div id="darkModeSwitch">
+      <label class="switch">
+        <input id="darkModeToggle" type="checkbox" onclick="darkModeToggler();">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <button id="addAnotherItem"class="btn btn-primary" onclick="addNewItem();">Add Another Item</button>
+	  <div id="CheckItemContainer" class="container">
 		<div class="row">
 
 			<div class="form-check col-2">
