@@ -38,6 +38,7 @@ function displayDate(){
 
   dateH3 = document.getElementById('displayDate');
   dateH3.innerHTML = currentDate;
+  document.getElementsByTagName('title')[0].innerHTML = "To Do " + currentDate
 }
 
 function addNewItem(){
