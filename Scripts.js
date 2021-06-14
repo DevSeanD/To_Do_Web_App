@@ -4,11 +4,27 @@ function darkModeToggler(){
     document.getElementById("toDoBody").style.backgroundColor = "black";
     document.getElementById("heading").style.color = "white";
     document.getElementById("displayDate").style.color = "white";
+    document.getElementById("addAnotherItem").classList.add("btn-dark");
+    document.getElementById("printAsPDF").classList.add("btn-dark");
+    var entries = document.getElementsByClassName("entry-styles");
+    for(var i = 0 ; i < entries.length; i++){
+      entries[i].style.backgroundColor = "black";
+      entries[i].style.color = "white";
+    }
   }
   if(!x){
     document.getElementById("toDoBody").style.backgroundColor = "white";
     document.getElementById("heading").style.color = "black";
     document.getElementById("displayDate").style.color = "black";
+    document.getElementById("addAnotherItem").classList.remove("btn-dark");
+    document.getElementById("addAnotherItem").classList.add("btn-primary");
+    document.getElementById("printAsPDF").classList.remove("btn-dark");
+    document.getElementById("printAsPDF").classList.add("btn-primary");
+    var entries = document.getElementsByClassName("entry-styles");
+    for(var i = 0 ; i < entries.length; i++){
+      entries[i].style.backgroundColor = "white";
+      entries[i].style.color = "black";
+    }
   }
 }
 
@@ -47,7 +63,13 @@ function addNewItem(){
   entryBox.classList.add("form-control");
   entryBox.classList.add("form-control-lg");
   entryBox.classList.add("col-8");
+
+  var x = document.getElementById("darkModeToggle").checked;
   entryBox.classList.add("entry-styles");
+  if(x){
+    entryBox.style.backgroundColor = "black";
+    entryBox.style.color = "white";
+  }
   entryBox.type = "text";
   entryBox.placeholder = "Enter a task!";
 
