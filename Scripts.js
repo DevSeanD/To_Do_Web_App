@@ -65,6 +65,7 @@ function addNewItem(){
   entryBox.classList.add("form-control-lg");
   entryBox.classList.add("col-8");
   entryBox.classList.add("entry-styles");
+  entryBox.style.color = "black";
 
   var x = document.getElementById("darkModeToggle").checked;
   entryBox.classList.add("entry-styles");
