@@ -38,7 +38,7 @@ function displayDate(){
 
   dateH3 = document.getElementById('displayDate');
   dateH3.innerHTML = currentDate;
-  document.getElementsByTagName('title')[0].innerHTML = "To Do " + currentDate
+  document.getElementsByTagName('title')[0].innerHTML = "To Do " + currentDate;
 }
 
 function addNewItem(){
@@ -83,6 +83,9 @@ function addNewItem(){
   row.appendChild(entryBox);
   itemContainer = document.getElementById('CheckItemContainer')
   itemContainer.appendChild(row);
+
+  printAsPDFButton = document.getElementById('printAsPDF');
+  printAsPDFButton.style.marginBottom = "1em";
 }
 
 window.onload = function() {
