@@ -3,6 +3,10 @@ body{
 	margin: 0;
 }
 
+#addAnotherItem{
+	margin-bottom: 1.5em;
+}
+
 .checkmark-label{
 	font-size: 3rem;
 	margin-top: 2rem;
